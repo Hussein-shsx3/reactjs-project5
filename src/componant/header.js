@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./header.css";
 const Header = () => {
   function m() {
@@ -11,19 +11,29 @@ const Header = () => {
     nav.classList.remove("act");
     document.getElementById("bar").style.display = "flex";
   }
+  useEffect(() => {
+    window.onscroll = function o() {
+      const hea = document.getElementById("header");
+      if (window.scrollY > 50) {
+        hea.style.backgroundColor = "black";
+      } else {
+        hea.style.backgroundColor = "transparent";
+      }
+    };
+  }, []);
   return (
-    <header>
+    <header id="header">
       <img src="./img/logo.svg" alt="" />
       <div id="res">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="#Home">Home</a>
           </li>
           <li>
-            <a href="/">Skills</a>
+            <a href="#Skills">Skills</a>
           </li>
           <li>
-            <a href="/">Projects</a>
+            <a href="#Projects">Projects</a>
           </li>
         </ul>
         <div className="social_link">

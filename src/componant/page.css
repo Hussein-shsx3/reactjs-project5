@@ -1,0 +1,87 @@
+#Page {
+  border-radius: 30px;
+  position: relative;
+  width: 390px;
+  height: 290px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+#shadow {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 290px;
+  background: linear-gradient(to right, #96186e, #4c0d95);
+  opacity: 0.9;
+  transition: all 0.5s;
+  transform: translateY(-300px);
+}
+
+#Page:hover #shadow {
+  transform: translateY(0px);
+}
+
+#Page img {
+  width: 100%;
+  height: 290px;
+}
+
+#Page__1 {
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  z-index: 5;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#Page:hover #Page__1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+#Page__1 h2 {
+  font-size: 33px;
+  margin-bottom: 5px;
+}
+
+#Page__1 h4 {
+  font-family: cursive;
+  font-weight: 400;
+}
+
+
+@media(min-width:754px) and (max-width:1200px) {
+  #Page {
+    width: 300px;
+    height: 235px;
+  }
+
+  #Page img {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+@media(max-width:753px) {
+  #Page {
+    width: 380px;
+    height: 250px;
+  }
+
+  #Page img {
+    width: 100%;
+    height: 250px;
+  }
+}
